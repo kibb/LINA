@@ -17,7 +17,7 @@ from tensorflow.keras.layers import Input , Conv2D , MaxPooling2D , Dropout , co
 
 # Define paths for the test set and the pre-trained model
 testSetPath = 'Test Set' #Please modify the path if needed
-modelPath = 'Model' #Please modify the path if needed
+modelPath = 'Models' #Please modify the path if needed
 
 
 # Define a function to create a U-Net model
