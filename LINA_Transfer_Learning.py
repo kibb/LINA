@@ -21,7 +21,7 @@ from tensorflow.keras import optimizers
 # Define paths for the test set and the pre-trained model
 trainingSetPath = 'Training Set' #Please modify the path if needed
 testSetPath = 'Test Set' #Please modify the path if needed
-modelPath = 'Model' #Please modify the path if needed
+modelPath = 'Models' #Please modify the path if needed
 savePath = 'Saved Models'
 
 # Define a function to create a U-Net model
