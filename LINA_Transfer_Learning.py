@@ -133,7 +133,8 @@ test_images = test_images.reshape(test_images.shape[0], test_images.shape[1], te
 test_labels = test_labels.reshape(test_labels.shape[0], test_labels.shape[1], test_labels.shape[2], 1)
 
 # Load the pre-trained model
-pretrained_model = keras.models.load_model(modelPath + '/PixelRegressionModel.h5')
+pretrained_model = UNet((352, 352, 8, 1))
+pretrained_model.load_weights(modelPath + '/PixelRegressionModel.h5')
 
 # Define the ratio of validation data to training data for the new dataset
 validtrain_split_ratio = 0.2  # % of the seen dataset to be put aside for validation, rest is for training
