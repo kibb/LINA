@@ -118,7 +118,7 @@ image_list = None
 train_images = train_images.reshape(train_images.shape[0], train_images.shape[1], train_images.shape[2], train_images.shape[3], 1)
 train_labels = train_labels.reshape(train_labels.shape[0], train_labels.shape[1], train_labels.shape[2], 1)
 
-# Create a U-Net model with input shape (352, 352, 9)
+# Create a U-Net model with input shape (352, 352, 8)
 model = UNet((352,352,8, 1))
 
 # Define the ratio of validation data to training data
