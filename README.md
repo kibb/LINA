@@ -1,6 +1,6 @@
 # Label-free Identification of Neurodegenerative-Disease-Associated Aggregates (LINA)
 
-![Figure 1 - Copy](https://github.com/kibb/LINA/assets/17764656/2e2520dc-2147-45a6-81f9-5e96ec7bb4e0)
+![LINA](https://github.com/kibb/LINA/assets/17764656/07cef85c-00b8-412b-af61-976c4f063339)
 
 This is the repository for [Label-free Identification of Protein Aggregates Using Deep Learning](https://www.biorxiv.org/content/10.1101/2023.04.21.537833v2) by Khalid A. Ibrahim, Kristin S. Grußmayer, Nathan Riguet, Lely Feletti, Hilal A. Lashuel, and Aleksandra Radenovic.
 
