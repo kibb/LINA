@@ -22,8 +22,9 @@ Typical install time is just the time needed to install these dependencies, whic
 ## Contents
 In this repository, we provide three pieces of code, with each one provided both as a Jupyter notebook file (.ipynb), where each cell can be run separately, and as a .py file which can be executed all-at-once:
 1. LINA_Train: this can be used to train a new U-Net model from scratch using pairs of images (inputs and labels).
-2. LINA_Test: this can be used for inference on new transmitted-light (TL) images using one of our pre-trained models.
-3. LINA_Transfer: this can be used to apply transfer-learning on the pre-trained model with new pairs of TL images and fluorescent labels.
+2. LINA_Test: this can be used for inference on new transmitted-light (TL) images using one of our pre-trained models.  
+   The typical running time on a desktop computer should be around a few minutes. The actual time varies depending on your system configuration.
+4. LINA_Transfer_Learning: this can be used to apply transfer-learning on the pre-trained model with new pairs of TL images and fluorescent labels.
 
 We provide four pre-trained models requiring different input types, inside the folder 'Models':
 1. PixelRegressionModel: a pixel-regression neural network model that expects 8-plane QPI inputs
@@ -32,8 +33,6 @@ We provide four pre-trained models requiring different input types, inside the f
 4. PixelRegressionModel_BF_1Plane: a pixel-regression neural network model that expects 1-plane brightfield inputs
 
 After installing the necessary system dependencies/environment, running the code is fairly simple. Please make sure the paths for the test data and the models are specified correctly, and to choose the model that is required. By default, PixelRegressionModel is loaded in the code. 
-
-The typical running time on a desktop computer should be around a few minutes. The actual time varies depending on your system configuration.
 
 ## Citation
 
