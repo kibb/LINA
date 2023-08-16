@@ -133,8 +133,8 @@ test_images = test_images.reshape(test_images.shape[0], test_images.shape[1], te
 test_labels = test_labels.reshape(test_labels.shape[0], test_labels.shape[1], test_labels.shape[2], 1)
 
 # Load the pre-trained model
-pretrained_model = UNet((352, 352, 8, 1))
-pretrained_model.load_weights(modelPath + '/PixelRegressionModel.h5')
+transfer_model = UNet((352, 352, 8, 1))
+transfer_model.load_weights(modelPath + '/PixelRegressionModel.h5')
 
 # Define the ratio of validation data to training data for the new dataset
 validtrain_split_ratio = 0.2  # % of the seen dataset to be put aside for validation, rest is for training
@@ -159,12 +159,6 @@ my_callbacks = [
     # Save the best model checkpoints during training
     tf.keras.callbacks.ModelCheckpoint(filepath= savePath + '/model_{epoch:02d}_{val_loss:.5f}.h5', monitor='val_loss', verbose=1, save_best_only=True, save_weights_only=False, mode='auto'),
 ]
-
-# Create a new output layer for the new task
-new_output_layer = Conv2D(1, 1, activation='linear')(pretrained_model.layers[-2].output)
-
-# Create the new model with the pre-trained layers and the new output layer
-transfer_model = keras.Model(inputs=pretrained_model.input, outputs=new_output_layer)
 
 # Compile the transfer model with a new loss function and optimizer
 transfer_model.compile(
