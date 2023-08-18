@@ -184,8 +184,8 @@ new_test_predict = transfer_model.predict(test_images)
 
 # plot the model loss
 
-plt.plot(transfer_history.transfer_history['loss'])
-plt.plot(transfer_history.transfer_history['val_loss'])
+plt.plot(transfer_history.history['loss'])
+plt.plot(transfer_history.history['val_loss'])
 plt.ylabel('Loss [MSE]')
 plt.xlabel('Epoch')
 plt.legend(['Training', 'Validation'], loc='best')
@@ -193,8 +193,8 @@ plt.show()
 
 # plot the model accuracy metric
 metrics = ['mean_absolute_error']
-plt.plot(np.array(transfer_history.transfer_history[metrics[0]]))
-plt.plot(np.array(transfer_history.transfer_history['val_' + metrics[0]]))
+plt.plot(np.array(transfer_history.history[metrics[0]]))
+plt.plot(np.array(transfer_history.history['val_' + metrics[0]]))
 plt.ylabel('Mean Absolute Error')
 plt.xlabel('Epoch')
 plt.legend(['Training', 'Validation'], loc='best')
